@@ -1,0 +1,232 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Grays Sport Almanac\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Sun Mar 20 2016 20:09:58 GMT+0100 (CET)\n"
+"PO-Revision-Date: Sun Mar 20 2016 20:32:13 GMT+0100 (CET)\n"
+"Last-Translator: administrador <misterge@tecnomancia.com>\n"
+"Language-Team: \n"
+"Language: Spanish (Spain)\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: es_ES\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: ../Grays_Sport_Almanac.php:157 ../Grays_Sport_Almanac.php:167
+msgid "Sports"
+msgstr "Deportes"
+
+#: ../Grays_Sport_Almanac.php:158
+msgid "Sport"
+msgstr "Deporte"
+
+#: ../Grays_Sport_Almanac.php:159
+msgid "Search Sports"
+msgstr "Buscar Deportes"
+
+#: ../Grays_Sport_Almanac.php:160
+msgid "All Sports"
+msgstr "Todos los Deportes"
+
+#: ../Grays_Sport_Almanac.php:161
+msgid "Parent Sport"
+msgstr "Deporte \"padre\""
+
+#: ../Grays_Sport_Almanac.php:162
+msgid "Parent Sport:"
+msgstr "Deporte \"padre\":"
+
+#: ../Grays_Sport_Almanac.php:163
+msgid "Edit Sport"
+msgstr "Editar Deporte"
+
+#: ../Grays_Sport_Almanac.php:164
+msgid "Update Sport"
+msgstr "Actualizar Deporte"
+
+#: ../Grays_Sport_Almanac.php:165
+msgid "Add New Sport"
+msgstr "Añadir nuevo deporte"
+
+#: ../Grays_Sport_Almanac.php:166
+msgid "New Sport Name"
+msgstr "Nombre del nuevo deporte"
+
+#: ../Grays_Sport_Almanac.php:183 ../Grays_Sport_Almanac.php:185 ..
+#: Grays_Sport_Almanac.php:198
+msgid "Competitors"
+msgstr "Competidores"
+
+#: ../Grays_Sport_Almanac.php:184
+msgid "Competitor"
+msgstr "Competidor"
+
+#: ../Grays_Sport_Almanac.php:186
+msgid "Popular Competitors"
+msgstr "Competidores populares"
+
+#: ../Grays_Sport_Almanac.php:187
+msgid "All Competitors"
+msgstr "Todos los competidores"
+
+#: ../Grays_Sport_Almanac.php:190
+msgid "Edit Competitor"
+msgstr "Editar competidor"
+
+#: ../Grays_Sport_Almanac.php:191
+msgid "Update Competitor"
+msgstr "Actualizar competidor"
+
+#: ../Grays_Sport_Almanac.php:192
+msgid "Add New Competitor"
+msgstr "Añadir competidor"
+
+#: ../Grays_Sport_Almanac.php:193
+msgid "New Competitor Name"
+msgstr "Nombre del nuevo competidor"
+
+#: ../Grays_Sport_Almanac.php:194
+msgid "Separate Competitors with commas"
+msgstr "Competidores separados por comas"
+
+#: ../Grays_Sport_Almanac.php:195
+msgid "Add or remove Competitors"
+msgstr "Añadir o borrar competidores"
+
+#: ../Grays_Sport_Almanac.php:196
+msgid "Choose from most used Competitors"
+msgstr "Elegir de entre los competidores más usados"
+
+#: ../Grays_Sport_Almanac.php:197
+msgid "No Competitors found"
+msgstr "No se han encontrado competidores"
+
+#. Name of the plugin
+msgid "Grays Sport Almanac"
+msgstr "Almanaque Deportivo Grays"
+
+#. URI of the plugin
+msgid "https://tecnomancia.com"
+msgstr "https://tecnomancia.com"
+
+#. Description of the plugin
+msgid ""
+"Show Future Sports Events Through WordPress. The almanac of the future... "
+"NOW!"
+msgstr ""
+"Administra los futuros encuentros deportivos en WordPress. El almanaque del "
+"futuro... AHORA."
+
+#. Author of the plugin
+msgid "misterge"
+msgstr "misterge"
+
+#. Author URI of the plugin
+msgid "https://misterge.tecnomancia.com"
+msgstr "https://misterge.tecnomancia.com"
+
+#: ../Grays_Sport_Almanac.php:110
+msgctxt "post type general name"
+msgid "Matches"
+msgstr "Partidos"
+
+#: ../Grays_Sport_Almanac.php:111
+msgctxt "post type singular name"
+msgid "Match"
+msgstr "Partido"
+
+#: ../Grays_Sport_Almanac.php:113 ../Grays_Sport_Almanac.php:257
+msgid "Match"
+msgstr "Partido"
+
+#: ../Grays_Sport_Almanac.php:114
+msgid "Add New"
+msgstr "Añadir Nuevo"
+
+#: ../Grays_Sport_Almanac.php:115
+msgid "Add New Match"
+msgstr "Añadir nuevo partido"
+
+#: ../Grays_Sport_Almanac.php:116
+msgid "Edit Match"
+msgstr "Editar Partido"
+
+#: ../Grays_Sport_Almanac.php:117
+msgid "New Match"
+msgstr "Nuevo Partido"
+
+#: ../Grays_Sport_Almanac.php:118
+msgid "All Matches"
+msgstr "Todos los partidos"
+
+#: ../Grays_Sport_Almanac.php:119
+msgid "View Match"
+msgstr "Ver Partido"
+
+#: ../Grays_Sport_Almanac.php:120
+msgid "Search Matches"
+msgstr "Buscar Partidos"
+
+#: ../Grays_Sport_Almanac.php:121
+msgid "No Matches found"
+msgstr "No se han encontrado partidos"
+
+#: ../Grays_Sport_Almanac.php:122
+msgid "No Matches found in Trash"
+msgstr "No se han encontrado partidos descartados"
+
+#: ../Grays_Sport_Almanac.php:223
+msgctxt "Still not played status"
+msgid "Future"
+msgstr "Futuro"
+
+#: ../Grays_Sport_Almanac.php:228
+#, php-format
+msgid "<span class=\"count\">(%s)</span> to be played"
+msgid_plural "<span class=\"count\">(%s)</span> to be played"
+msgstr[0] "<span class=\"count\">(%s)</span> a ser jugados"
+msgstr[1] "<span class=\"count\">(%s)</span> a ser jugados"
+
+#: ../Grays_Sport_Almanac.php:231
+msgctxt "Played status"
+msgid "Played"
+msgstr "Pasado"
+
+#: ../Grays_Sport_Almanac.php:236
+#, php-format
+msgid "<span class=\"count\">(%s)</span> played"
+msgid_plural "<span class=\"count\">(%s)</span> played"
+msgstr[0] "<span class=\"count\">(%s)</span> jugado"
+msgstr[1] "<span class=\"count\">(%s)</span> jugados"
+
+#: ../Grays_Sport_Almanac.php:239
+msgctxt "Playing payment status"
+msgid "Playing"
+msgstr "Presente"
+
+#: ../Grays_Sport_Almanac.php:244
+#, php-format
+msgid "<span class=\"count\">(%s)</span> playing just now!"
+msgid_plural "<span class=\"count\">(%s)</span> playing just now!"
+msgstr[0] "<span class=\"count\">(%s)</span> jugándose ahora"
+msgstr[1] "<span class=\"count\">(%s)</span> jugándose ahora"
+
+#: ../Grays_Sport_Almanac.php:258
+msgid "Matches"
+msgstr "Partidos"
+
+#: ../Grays_Sport_Almanac.php:601
+#, php-format
+msgctxt "match post type name"
+msgid "No %s found"
+msgstr "No hay %s encontrados"

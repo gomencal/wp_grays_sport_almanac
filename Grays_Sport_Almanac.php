@@ -5,12 +5,12 @@
  * Description: Show Future Sports Events Through WordPress. The almanac of the future... NOW!
  * Author: misterge
  * Author URI: https://misterge.tecnomancia.com
- * Version: 0.3
+ * Version: 0.4
  * Text Domain: gsa
  * @package GSA
  * @category Core
  * @author misterge
- * @version 0.3
+ * @version 0.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -27,7 +27,7 @@ class GraysSportAlmanac
 	/**
 	 * @var string
 	 */
-	public $version = '0.3';
+	public $version = '0.4';
 
 	/**
 	 * Init
@@ -46,6 +46,7 @@ class GraysSportAlmanac
 		$this->setup_shortcode();
 
 		register_activation_hook(__FILE__, 'gsa_install');
+
 	}
 
 
@@ -94,7 +95,7 @@ class GraysSportAlmanac
 		add_action( 'init', array( $this, 'setup_post_types' ) );
 		add_action( 'init', array( $this, 'setup_taxonomies' ) );
 		add_action( 'init', array( $this, 'setup_post_type_statuses' ) );
-
+		add_action( 'init', array( $this, 'load_textdomain' ) );
 	}
 
 
@@ -154,17 +155,17 @@ class GraysSportAlmanac
 		// Add a taxonomy like categories
 		// Sports, they can be categorized (football -> sub21...)
 		$labels = array(
-			'name'              => 'Sports',
-			'singular_name'     => 'Sport',
-			'search_items'      => 'Search Sports',
-			'all_items'         => 'All Sports',
-			'parent_item'       => 'Parent Sport',
-			'parent_item_colon' => 'Parent Sport:',
-			'edit_item'         => 'Edit Sport',
-			'update_item'       => 'Update Sport',
-			'add_new_item'      => 'Add New Sport',
-			'new_item_name'     => 'New Sport Name',
-			'menu_name'         => 'Sports',
+			'name'              => __('Sports'),
+			'singular_name'     => __('Sport'),
+			'search_items'      => __('Search Sports'),
+			'all_items'         => __('All Sports'),
+			'parent_item'       => __('Parent Sport'),
+			'parent_item_colon' => __('Parent Sport:'),
+			'edit_item'         => __('Edit Sport'),
+			'update_item'       => __('Update Sport'),
+			'add_new_item'      => __('Add New Sport'),
+			'new_item_name'     => __('New Sport Name'),
+			'menu_name'         => __('Sports'),
 		);
 
 		$args = array(
@@ -180,22 +181,22 @@ class GraysSportAlmanac
 
 		// Add a taxonomy like tags. Teams/Competitors
 		$labels = array(
-			'name'                       => 'Competitors',
-			'singular_name'              => 'Competitor',
-			'search_items'               => 'Competitors',
-			'popular_items'              => 'Popular Competitors',
-			'all_items'                  => 'All Competitors',
+			'name'                       => __('Competitors'),
+			'singular_name'              => __('Competitor'),
+			'search_items'               => __('Competitors'),
+			'popular_items'              => __('Popular Competitors'),
+			'all_items'                  => __('All Competitors'),
 			'parent_item'                => null,
 			'parent_item_colon'          => null,
-			'edit_item'                  => 'Edit Competitor',
-			'update_item'                => 'Update Competitor',
-			'add_new_item'               => 'Add New Competitor',
-			'new_item_name'              => 'New Competitor Name',
-			'separate_items_with_commas' => 'Separate Competitors with commas',
-			'add_or_remove_items'        => 'Add or remove Competitors',
-			'choose_from_most_used'      => 'Choose from most used Competitors',
-			'not_found'                  => 'No Competitors found',
-			'menu_name'                  => 'Competitors',
+			'edit_item'                  => __('Edit Competitor'),
+			'update_item'                => __('Update Competitor'),
+			'add_new_item'               => __('Add New Competitor'),
+			'new_item_name'              => __('New Competitor Name'),
+			'separate_items_with_commas' => __('Separate Competitors with commas'),
+			'add_or_remove_items'        => __('Add or remove Competitors'),
+			'choose_from_most_used'      => __('Choose from most used Competitors'),
+			'not_found'                  => __('No Competitors found'),
+			'menu_name'                  => __('Competitors'),
 		);
 
 		$args = array(
@@ -273,6 +274,38 @@ class GraysSportAlmanac
 	}
 
 	/**
+	 * Loads the plugin language files
+	 *
+	 * @access public
+	 * @since 0.3
+	 * @return void
+	 */
+	public function load_textdomain() {
+		// Set filter for plugin's languages directory
+		$gsa_lang_dir = dirname( plugin_basename( GSA_PLUGIN_FILE ) ) . '/languages/';
+		$gsa_lang_dir = apply_filters( 'gsa_languages_directory', $gsa_lang_dir );
+
+		// Traditional WordPress plugin locale filter
+		$locale        = apply_filters( 'plugin_locale',  get_locale(), 'gsa' );
+		$mofile        = sprintf( '%1$s-%2$s.mo', 'gsa', $locale );
+
+		// Setup paths to current locale file
+		$mofile_local  = $gsa_lang_dir . $mofile;
+		$mofile_global = WP_LANG_DIR . '/gsa/' . $mofile;
+
+		if ( file_exists( $mofile_global ) ) {
+			// Look in global /wp-content/languages/gsa folder
+			load_textdomain( 'gsa', $mofile_global );
+		} elseif ( file_exists( $mofile_local ) ) {
+			// Look in local /wp-content/plugins/wp_grays_sport_almanac/languages/ folder
+			load_textdomain( 'gsa', $mofile_local );
+		} else {
+			// Load the default language files
+			load_plugin_textdomain( 'gsa', false, $gsa_lang_dir );
+		}
+	}
+	
+	/**
 	 * Register the [almanac] shortcode.
 	 */
 	private function setup_shortcode() {
@@ -310,7 +343,7 @@ class GraysSportAlmanac
 			'exclude_sport' => '',
 			'competitors'             => '',
 			'exclude_competitors'     => '',
-			'relation'         => 'OR',
+			'relation'         => 'AND',
 			'number'           => 9,
 			'excerpt'          => 'yes',
 			'full_content'     => 'no',

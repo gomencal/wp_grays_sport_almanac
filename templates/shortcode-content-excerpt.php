@@ -9,3 +9,5 @@
 		<?php echo apply_filters( 'gsa_matchs_excerpt', wp_trim_words( get_post_field( 'post_content', get_the_ID() ), $excerpt_length ) ); ?>
 	</div>
 <?php endif; ?>
+<div><?php the_taxonomies();?></div>
+<div><?php the_tags();?></div>
